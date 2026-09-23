@@ -129,13 +129,13 @@ const friends = {
         `,
 
         matter:
-            "You are more important to this little story than you know.",
+            "You are more important to this little story of mine than you know.",
 
         friendship:
             "Every friendship has its own kind of chaos, and ours has its own.",
 
         promise:
-            "Keep being exactly the person who made this friendship special."
+            "Keep being exactly the person who made this friendship special. never change for others"
 
     },
 
@@ -208,11 +208,11 @@ const friends = {
         code: "rose",
 
         letter: `
-            To my angel Anishma, 
+            To my angel Anu, 
             
             you came into my life like a blessing, 
             
-            transitioning from a shared love of videos to a real-life bond 
+            who changed everything just by words and hugs, 
             that saved me when I felt entirely alone. 
             Your promise to hold and protect me when others leave is my...greatest comfort,
             and your care makes me want to cherish you forever.
@@ -1009,31 +1009,31 @@ document
     .getElementById("openSecretButton")
     .addEventListener("click", function() {
 
-        const friend = secretScenes[currentFriend.name];
-
-        if (!friend) {
-
-            console.log(
-                "No secret scene found for:",
-                currentFriend.name
-            );
-
+        if (!currentFriend) {
+            console.error("Current friend is missing.");
             return;
         }
 
+        const friend = secretScenes[currentFriend.name];
 
-        document.getElementById("sceneTitle").innerText =
+        if (!friend) {
+            console.error(
+                "No secret scene found for:",
+                currentFriend.name
+            );
+            return;
+        }
+
+        document.getElementById("sceneTitle").textContent =
             friend.title;
 
-
-        document.getElementById("sceneText").innerText =
+        document.getElementById("sceneText").textContent =
             friend.text;
 
-
-        document.getElementById("sceneEnding").innerText =
+        document.getElementById("sceneEnding").textContent =
             friend.ending;
 
-
+            
         changeScreen(
             "secretScreen",
             "sceneScreen"
@@ -1092,21 +1092,17 @@ document
 
 function changeScreen(oldScreen, newScreen) {
 
-    const oldElement =
-        document.getElementById(oldScreen);
+    const oldElement = document.getElementById(oldScreen);
+    const newElement = document.getElementById(newScreen);
 
-    const newElement =
-        document.getElementById(newScreen);
-
+    if (!oldElement || !newElement) {
+        console.error("Screen not found:", oldScreen, newScreen);
+        return;
+    }
 
     oldElement.classList.remove("active");
 
-
-    setTimeout(function() {
-
-        newElement.classList.add("active");
-
-    }, 500);
+    newElement.classList.add("active");
 
 }
 

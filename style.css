@@ -1062,7 +1062,7 @@ button:active {
     /* Floating animation */
 
     animation:
-        heartFloat 5s ease-in-out forwards;
+        heartFloat 45s ease-in-out forwards;
 }
 
 
