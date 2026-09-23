@@ -118,7 +118,10 @@ const friends = {
         letter: `
             Dear Ani,
 
-            Some people somehow feel familiar
+            Some people somehow feel familiar,but still lives at a distance you are one of that,
+            to me the way we share things always felt in a way of twins always presious
+            the days we spent together will alwys be my most lovable memory...even if the whole 
+            world stood against you i will alwys be your side...
 
             You have your own place here.
 
@@ -148,8 +151,11 @@ const friends = {
 
             Sometimes people enter our lives unexpectedly
             and slowly become someone we are grateful for...
-            and you entered my life like it was so
-
+            and you entered my life like it was so easy and..
+            you made my see the world diffrently... you totally chnged everything..
+            you restored my love, my hope almost my everything you have a total postivity...
+            you will alwys be my RM i wish to alwys be you kook...
+                                          
             ♡
         `,
 
@@ -958,7 +964,7 @@ const secretScenes = {
     },
 
 
-    Anushma: { 
+    Anu: { 
 
         title: "A memory we haven't made yet...",
 
@@ -1003,17 +1009,16 @@ document
     .getElementById("openSecretButton")
     .addEventListener("click", function() {
 
-        const friend = secretScenes[currentFriend];
+        const friend = secretScenes[currentFriend.name];
 
         if (!friend) {
 
             console.log(
                 "No secret scene found for:",
-                currentFriend
+                currentFriend.name
             );
 
             return;
-
         }
 
 
@@ -1035,7 +1040,6 @@ document
         );
 
     });
-
 
 /* =====================================================
    22 — SCENE → FINAL PAGE
