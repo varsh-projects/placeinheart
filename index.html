@@ -362,75 +362,68 @@
 
 
     <!-- =====================================
-         06 — SECRET DOOR
-    ====================================== -->
+     06 — SECRET DOOR
+====================================== -->
 
-    <section id="secretScreen" class="screen">
+<section id="secretScreen" class="screen">
 
-        <div class="secret-container">
-
-            <p class="eyebrow">
-                you made it this far...
-            </p>
-
-
-            <h2>
-                There's one last door.
-            </h2>
-
-
-            <div class="secret-door">
-                🔐
-            </div>
-
-
-            <p>
-                Some things are better
-                discovered than explained.
-            </p>
-
-
-            <button id="openSecretButton">
-                OPEN THE LAST DOOR →
-            </button>
-
-        </div>
-
-    </section>
-    <!-- =====================================
-     06.5 — SECRET SCENE
-     ====================================== -->
-
-     <section id="sceneScreen" class="screen">
-
-      <div class="scene-container">
+    <div class="secret-container">
 
         <p class="eyebrow">
-            just a little imagination...
+            you made it this far...
         </p>
 
-        <h2 id="sceneTitle">
+        <h2>
+            There's one last door.
         </h2>
 
-        <div class="scene-card">
+        <!-- SECRET DOOR -->
 
-            <p id="sceneText">
-            </p>
+        <div class="secret-door-wrapper">
 
-            <p id="sceneEnding">
-            </p>
+            <div class="secret-door">
+
+                <div class="door-frame">
+
+                    <div class="door">
+
+                        <div class="door-glow"></div>
+
+                        <div class="door-panel top"></div>
+                        <div class="door-panel bottom"></div>
+
+                        <div class="door-knob"></div>
+
+                        <div class="keyhole">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Floating key -->
+
+                <div class="floating-key">
+                    🔑
+                </div>
+
+            </div>
 
         </div>
 
-        <button id="continueFromScene">
-            CONTINUE → 
+        <p id="doorMessage">
+            Some things are better
+            discovered than explained.
+        </p>
+
+        <button id="openSecretButton">
+            FIND THE KEY →
         </button>
 
-      </div>
+    </div>
 
-   </section>
-
-
+</section>
 
     <!-- =====================================
          07 — FINAL PAGE

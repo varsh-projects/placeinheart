@@ -892,7 +892,7 @@ const secretScenes = {
         title: "Just one ordinary college day...",
 
         text:
-        "imagine after us sitting together between classes, " +
+        "imagine us sitting together between classes, " +
         "talking about completely random things and laughing " +
         "at something that probably wouldn't even make sense " +
         "to anyone else.",
@@ -1027,7 +1027,8 @@ document
             return;
         }
 
-        const friend = secretScenes[currentFriend.name];
+        const friend =
+            secretScenes[currentFriend.name];
 
         if (!friend) {
             console.error(
@@ -1036,6 +1037,40 @@ document
             );
             return;
         }
+
+
+        /* ---------------------------------------------
+           KEY FOUND
+        --------------------------------------------- */
+
+        const secretContainer =
+            document.querySelector(".secret-container");
+
+        secretContainer.classList.add("key-found");
+
+        document.getElementById("doorMessage").textContent =
+            "The key found its way to the door...";
+
+
+        /* ---------------------------------------------
+           WAIT FOR KEY ANIMATION
+        --------------------------------------------- */
+
+        setTimeout(function() {
+
+            secretContainer.classList.add(
+                "door-opening"
+            );
+
+            document.getElementById("doorMessage").textContent =
+                "Some doors are worth opening. ♡";
+
+        }, 1200);
+
+
+        /* ---------------------------------------------
+           PREPARE FRIEND'S SECRET SCENE
+        --------------------------------------------- */
 
         document.getElementById("sceneTitle").textContent =
             friend.title;
@@ -1047,12 +1082,21 @@ document
             friend.ending;
 
 
-        changeScreen(
-            "secretScreen",
-            "sceneScreen"
-        );
+        /* ---------------------------------------------
+           OPEN SCENE AFTER DOOR ANIMATION
+        --------------------------------------------- */
+
+        setTimeout(function() {
+
+            changeScreen(
+                "secretScreen",
+                "sceneScreen"
+            );
+
+        }, 3000);
 
     });
+
 
 /* =====================================================
    22 — SCENE → FINAL PAGE
@@ -1070,7 +1114,6 @@ document
         );
 
     });
-
 
 /* =====================================================
    23 — FINAL PAGE
