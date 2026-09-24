@@ -1753,3 +1753,37 @@ button:active {
     opacity: 0;
     pointer-events: none;
 }
+/* =========================================
+   SECRET DOOR — MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .secret-container {
+        width: 94%;
+    }
+
+    .secret-door-wrapper {
+        margin: 25px 0 20px;
+    }
+
+    .secret-door {
+        width: 170px;
+        height: 245px;
+    }
+
+    .door-frame {
+        width: 140px;
+        height: 220px;
+    }
+
+    .floating-key {
+        right: -15px;
+        top: 45px;
+    }
+
+    #doorMessage {
+        font-size: 17px;
+    }
+
+}

@@ -1040,36 +1040,21 @@ document
 
 
         /* ---------------------------------------------
-           KEY FOUND
+           GET ELEMENTS
         --------------------------------------------- */
 
         const secretContainer =
             document.querySelector(".secret-container");
 
-        secretContainer.classList.add("key-found");
+        const doorMessage =
+            document.getElementById("doorMessage");
 
-        document.getElementById("doorMessage").textContent =
-            "The key found its way to the door...";
-
-
-        /* ---------------------------------------------
-           WAIT FOR KEY ANIMATION
-        --------------------------------------------- */
-
-        setTimeout(function() {
-
-            secretContainer.classList.add(
-                "door-opening"
-            );
-
-            document.getElementById("doorMessage").textContent =
-                "Some doors are worth opening. ♡";
-
-        }, 1200);
+        const sceneScreen =
+            document.getElementById("sceneScreen");
 
 
         /* ---------------------------------------------
-           PREPARE FRIEND'S SECRET SCENE
+           PREPARE SECRET SCENE FIRST
         --------------------------------------------- */
 
         document.getElementById("sceneTitle").textContent =
@@ -1083,15 +1068,42 @@ document
 
 
         /* ---------------------------------------------
-           OPEN SCENE AFTER DOOR ANIMATION
+           KEY FOUND
+        --------------------------------------------- */
+
+        secretContainer.classList.add("key-found");
+
+        doorMessage.textContent =
+            "The key found its way to the door...";
+
+
+        /* ---------------------------------------------
+           OPEN DOOR
         --------------------------------------------- */
 
         setTimeout(function() {
 
-            changeScreen(
-                "secretScreen",
-                "sceneScreen"
+            secretContainer.classList.add(
+                "door-opening"
             );
+
+            doorMessage.textContent =
+                "Some doors are worth opening. ♡";
+
+        }, 1200);
+
+
+        /* ---------------------------------------------
+           MOVE TO SECRET SCENE
+        --------------------------------------------- */
+
+        setTimeout(function() {
+
+            document
+                .getElementById("secretScreen")
+                .classList.remove("active");
+
+            sceneScreen.classList.add("active");
 
         }, 3000);
 
