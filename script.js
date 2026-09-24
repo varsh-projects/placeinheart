@@ -875,7 +875,7 @@ const secretScenes = {
         title: "If we were together...",
 
         text:
-        "I imagine us sitting somewhere after college, " +
+        "imagine us sitting somewhere after college, " +
         "talking about everything that happened that day. " +
         "Maybe you'd tell me something that was bothering you, " +
         "and I'd remind you that you never have to question " +
@@ -892,7 +892,7 @@ const secretScenes = {
         title: "Just one ordinary college day...",
 
         text:
-        "I imagine us sitting together between classes, " +
+        "imagine after us sitting together between classes, " +
         "talking about completely random things and laughing " +
         "at something that probably wouldn't even make sense " +
         "to anyone else.",
@@ -908,9 +908,11 @@ const secretScenes = {
         title: "A little moment with you...",
 
         text:
-        "I imagine us walking around college after class, " +
-        "talking, teasing each other and somehow turning " +
-        "a completely normal day into something worth remembering.",
+        "imagine you came from work all tired and opened the door of you house"+
+        "but it was already opened being confused you opened the door and entered inside, " +
+        "but everything was dark as you came home at nyt and when you turn on all the lights suddenly a loud shout of" +
+        " HAPPY BIRTHDAY PRINCYYYYYY was heard and there stood me, seetha , prithika, your sister all grown up and your parents"+
+        "being proud of their first daughter and the whole nyt we had a lot of fun after cutting cake like movie marathon and moreeee",
 
         ending:
         "Maybe the best memories are the ones we never planned. ♡"
@@ -920,10 +922,15 @@ const secretScenes = {
 
     Ani: {
 
-        title: "If we had a whole day together...",
+        title: "THE DAY I WILL BBE NEXT TO YOU...",
 
         text:
-        "I imagine us sitting somewhere quiet and talking " +
+        " imagine you went to the beach after yoou work "+" and sitting there you started missing your famaliy"+
+        "and suddenly some one sat near you and you didn't even pay much attention until a key chain hang in the air"+
+        "infront of you and when you look at your side i was sitting next you with a smile"+
+        "and then i give you the yightest hug there and take you from there to your pg and then you get to know"+
+        " i was going to stay with you in next room of you in your pg"+
+        "from the next day us sitting somewhere quiet and talking " +
         "for hours about random thoughts, silly things, " +
         "dreams and everything in between.",
 
@@ -938,13 +945,14 @@ const secretScenes = {
         title: "If you were sitting beside me...",
 
         text:
-        "I imagine one of those days when everything feels " +
-        "a little too much, and you simply sit beside me. " +
-        "No big explanation needed. Just your presence making " +
-        "the whole day feel a little lighter.",
+        "imagine a day when you where leaving from clg and " +
+        "suddenly someone came to you giving a bouquet od roses to you" +
+        "and said to turn over and you get to see me there with a smile and then" +
+        "without any warning you were crushed in a tight embrace of mine and i chuckle with happy tears"+
+        "and the next day i take you out and give everything "+"i always wished to give you a day full of happiness",
 
         ending:
-        "Some people become comfort without even trying. ♡"
+        "Some day i would be your real sister to look after you the way you after me now ♡"
 
     },
 
@@ -956,7 +964,10 @@ const secretScenes = {
         text:
         "I imagine us spending a whole day together, " +
         "laughing over random things, sharing stories " +
-        "and making fun out of even the most boring moments.",
+        "and making fun out of even the most boring moments."+
+        "a day where i take you out ofr shoping, and everything just spending the day"+
+        "and when the nyt enters leaving you back at your house we talk for min and i slowly "+
+        "walk away with a smile in my lips that day...",
 
         ending:
         "An ordinary day made special because you were there. ♡"
@@ -969,9 +980,11 @@ const secretScenes = {
         title: "A memory we haven't made yet...",
 
         text:
-        "just a day with you where you talk all yoiu want , " +
+        "just a day with you where you talk all we want , " +
         "roming around in places and laughing our heart out " +
-        "that probably wouldn't make sense to anyone else.",
+        "that probably wouldn't make sense to anyone else."+
+        "i want spean a whole day with you just "+
+        "listen to you...do everything we wish. have a day just for us ",
 
         ending:
         "Maybe some imaginary memories deserve to become real ones someday. ♡"
@@ -1033,7 +1046,7 @@ document
         document.getElementById("sceneEnding").textContent =
             friend.ending;
 
-            
+
         changeScreen(
             "secretScreen",
             "sceneScreen"
